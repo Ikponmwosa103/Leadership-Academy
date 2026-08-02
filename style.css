@@ -247,8 +247,8 @@ nav.scrolled {
   left: 0;
   width: 100%;
   height: 100vh;
-  height: 100dvh; /* better mobile support */
-  background: rgba(15, 23, 42, 0.55); /* dark overlay */
+  height: 100dvh;
+  background: rgba(15, 23, 42, 0.55);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   opacity: 0;
@@ -257,16 +257,13 @@ nav.scrolled {
   z-index: 1000;
   display: flex;
   justify-content: flex-end;
-
 }
 
 .mobile-nav.open {
   opacity: 1;
   visibility: visible;
-  
 }
 
-/* The actual sliding panel */
 .mobile-nav-inner {
   width: min(100%, 380px);
   height: 100%;
@@ -279,14 +276,12 @@ nav.scrolled {
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   overflow-y: auto;
-  
 }
 
 .mobile-nav.open .mobile-nav-inner {
   transform: translateX(0);
 }
 
-/* Top bar inside the panel */
 .mobile-nav-header {
   display: flex;
   align-items: center;
@@ -297,7 +292,6 @@ nav.scrolled {
   top: 0;
   background: #fff;
   z-index: 2;
-
 }
 
 .mobile-nav-header .brand {
@@ -313,7 +307,6 @@ nav.scrolled {
   font-size: 1.15rem;
 }
 
-/* Close button inside panel */
 .mobile-close {
   width: 40px;
   height: 40px;
@@ -321,9 +314,7 @@ nav.scrolled {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* color: var(--heading); */
-    color: white;
-  /* transition: all 0.25s ease; */
+  color: white;
 }
 
 .mobile-close:hover {
@@ -331,7 +322,6 @@ nav.scrolled {
   color: var(--purple);
 }
 
-/* Links */
 .mobile-nav-links {
   list-style: none;
   padding: 1.5rem 1.25rem;
@@ -339,7 +329,6 @@ nav.scrolled {
   flex-direction: column;
   gap: 0.35rem;
   flex: 1;
-  
 }
 
 .mobile-nav-links a {
@@ -379,7 +368,6 @@ nav.scrolled {
   transform: translateX(0);
 }
 
-/* Bottom CTA area */
 .mobile-nav-footer {
   padding: 1.5rem;
   border-top: 1px solid var(--border);
@@ -1193,4 +1181,46 @@ footer {
   background: var(--purple);
   color: #fff;
   border-color: var(--purple);
+}
+
+/* =====================================================
+   RESPONSIVE – Small & Extra-small screens
+   ===================================================== */
+
+/* Tablets / small laptops */
+/* =====================================================
+   RESPONSIVE – Small & Extra-small screens
+   ===================================================== */
+
+/* Tablets / small laptops */
+@media (max-width: 900px) {
+  .hero {
+    padding: 7.5rem 0 4rem;
+  }
+
+  .about-section {
+    padding-top: 4.5rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 640px) {
+  .hero {
+    padding: 6.75rem 0 3.5rem;
+  }
+
+  .about-section {
+    padding-top: 4rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .hero {
+    padding: 6rem 0 3rem;
+  }
+
+  .about-section {
+    padding-top: 3.5rem;
+  }
 }
