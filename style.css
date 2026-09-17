@@ -212,6 +212,63 @@ nav.scrolled {
   width: 100%;
 }
 
+.desktop-nav .nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-left: 0.25rem;
+}
+
+.desktop-nav .nav-auth::after {
+  display: none;
+}
+
+.desktop-nav .nav-auth-link {
+  padding: 0.45rem 0.9rem;
+  color: var(--purple);
+}
+
+.desktop-nav .nav-auth-link::after {
+  display: none;
+}
+
+.desktop-nav .nav-auth-link.nav-register {
+  color: #fff;
+}
+
+.nav-auth-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.nav-login {
+  color: var(--purple);
+  border: 1px solid rgba(109, 40, 217, 0.2);
+}
+
+.nav-login:hover {
+  background: var(--purple-light);
+}
+
+.nav-register {
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+  box-shadow: 0 5px 16px rgba(109, 40, 217, 0.22);
+}
+
+.nav-register:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(109, 40, 217, 0.3);
+}
+
 /* Mobile */
 .mobile-menu-container {
   display: contents;
@@ -386,6 +443,18 @@ nav.scrolled {
   font-size: 0.82rem;
   color: var(--muted);
   margin-top: 1rem;
+}
+
+.mobile-auth-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin-top: 0.7rem;
+}
+
+.mobile-auth-actions .btn {
+  min-height: 46px;
+  padding: 0.8rem 0.65rem;
 }
 
 /* Show toggle only on mobile */
@@ -1222,5 +1291,35 @@ footer {
 
   .about-section {
     padding-top: 3.5rem;
+  }
+
+  .mobile-nav-inner {
+    width: 100%;
+  }
+
+  .mobile-nav-header {
+    padding-inline: 1rem;
+  }
+
+  .mobile-nav-links {
+    padding-inline: 0.85rem;
+  }
+
+  .mobile-nav-footer {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .desktop-nav {
+    gap: 1rem;
+  }
+
+  .desktop-nav a {
+    font-size: 0.84rem;
+  }
+
+  .nav-auth-link {
+    padding-inline: 0.7rem;
   }
 }
