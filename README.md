@@ -1,36 +1,18 @@
-# Leadership Academy
+# Leadership Academy — React
 
-## Run the site
+React/Vite conversion of the supplied Leadership Academy website. The visual styling, sections, mobile navigation, contact form, authentication, account page, assets, and existing PHP API endpoints are preserved.
 
-Serve the project through PHP rather than opening the HTML files directly:
+## Run
 
 ```bash
-php -S 127.0.0.1:8080
+npm install
+npm run dev
 ```
 
-The browser calls the PHP API at `./Api/`, so the site and API must use the
-same origin.
+For production:
+```bash
+npm run build
+npm run preview
+```
 
-## Database
-
-The API uses MySQL or MariaDB. Set either the Railway-style variables:
-
-- `MYSQLHOST`
-- `MYSQLPORT` (optional, defaults to `3306`)
-- `MYSQLDATABASE`
-- `MYSQLUSER`
-- `MYSQLPASSWORD`
-
-or the equivalent `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, and
-`DB_PASSWORD` variables. A `mysql://` `DATABASE_URL` is also supported.
-
-On the first API request, the app creates the `users` and `contact_messages`
-tables automatically. The same schema is available in `database.sql` for an
-explicit migration. Set `DB_AUTO_MIGRATE=false` if your deployment requires
-manual migrations.
-
-## Contact email
-
-Contact messages are always saved in the database. SMTP delivery is optional;
-configure the `MAILTRAP_*` variables and install PHPMailer under `vendor/` to
-also forward messages by email.
+The PHP files in `public/Api` are retained and should be served by PHP/MySQL in the same deployment environment. The React frontend calls them at `/Api/...`.
