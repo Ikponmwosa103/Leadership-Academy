@@ -1,0 +1,1 @@
+"use client"; import {Auth} from "../../components/site"; export default function Page(){return <Auth/>}

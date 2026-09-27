@@ -1,0 +1,1 @@
+import "./globals.css"; export const metadata={title:"Leadership Academy",description:"Shape the Leaders of Tomorrow"}; export default function RootLayout({children}){return <html lang="en"><body>{children}</body></html>}
